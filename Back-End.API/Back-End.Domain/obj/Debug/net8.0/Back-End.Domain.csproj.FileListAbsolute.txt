@@ -1,0 +1,15 @@
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\bin\Debug\net8.0\Back-End.Domain.deps.json
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\bin\Debug\net8.0\Back-End.Domain.dll
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\bin\Debug\net8.0\Back-End.Domain.pdb
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\Back-End.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\Back-End.Domain.AssemblyInfoInputs.cache
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\Back-End.Domain.AssemblyInfo.cs
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\Back-End.Domain.csproj.CoreCompileInputs.cache
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\Back-End.Domain.sourcelink.json
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\Back-End.Domain.dll
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\refint\Back-End.Domain.dll
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\Back-End.Domain.pdb
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\ref\Back-End.Domain.dll
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\bin\Debug\net8.0\Back-End.Domain.runtimeconfig.json
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\Back-End.Domain.csproj.AssemblyReference.cache
+C:\OneDrive\Área de Trabalho\cadastroLivros\teste-tecnico-zella\Back-End.API\Back-End.Domain\obj\Debug\net8.0\Back-End.Domain.genruntimeconfig.cache
