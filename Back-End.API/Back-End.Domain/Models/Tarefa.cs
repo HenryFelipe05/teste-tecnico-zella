@@ -21,8 +21,6 @@ namespace Back_End.Domain.Models
 
 		public int? CodigoStatusTarefa { get; set; }
 
-		[Column(TypeName = "datetime")]
-		public DateTime? DataCriacao { get; set; }
 		[ForeignKey("CodigoStatusTarefa")]
 		[InverseProperty("Tarefas")]
 		public virtual StatusTarefa CodigoStatusTarefaNavigation { get; set; }

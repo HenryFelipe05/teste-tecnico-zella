@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Back_End.Application.Commands
+﻿namespace Back_End.Application.Commands
 {
-	public class NovaTarefaCommand
+	public class TarefaCommand
 	{
         public int CodigoUsuario { get; set; }
         public string? NomeTarefa { get; set; }

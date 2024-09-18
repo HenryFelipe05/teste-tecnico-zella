@@ -21,7 +21,7 @@ namespace Back_End.Infra.Repositories
 			await _dbcontext.SaveChangesAsync();
 		}
 
-		public async Task AlterarTarefaAsync(int codigoTarefa, Tarefa tarefa)
+		public async Task AlterarTarefaAsync(Tarefa tarefa)
 		{
 			_dbcontext.Entry(tarefa).State = EntityState.Modified;
 			await _dbcontext.SaveChangesAsync();

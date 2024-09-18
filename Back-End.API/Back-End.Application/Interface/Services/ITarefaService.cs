@@ -1,4 +1,5 @@
 ﻿using Back_End.Application.Commands;
+using Back_End.Application.Queries;
 using Back_End.Domain.Models;
 
 namespace Back_End.Application.Interface.Services
@@ -7,8 +8,8 @@ namespace Back_End.Application.Interface.Services
 	{
 		Task<IEnumerable<Tarefa>> RecuperarTarefasUsuarioAsync(int codigoUsuario);
 		Task<Tarefa> RecuperarDetalhesTarefaAsync(int codigoTarefa);
-		Task AdicionarTarefaAsync(NovaTarefaCommand novaTarefa);
-		Task AlterarTarefaAsync(int codigoTarefa, Tarefa tarefa);
+		Task AdicionarTarefaAsync(TarefaCommand novaTarefa);
+		Task AlterarTarefaAsync(TarefaQuery tarefa, int codigoTarefa, int codigoUsuario);
 		Task ExcluirTarefaAsync(int codigoTarefa);
 	}
 }

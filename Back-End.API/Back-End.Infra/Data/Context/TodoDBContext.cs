@@ -34,8 +34,6 @@ namespace Back_End.Infra.Data.Context
 			{
 				entity.HasKey(e => e.CodigoTarefa).HasName("PK__Tarefa__72B4FA61E0D6E553");
 
-				entity.Property(e => e.DataCriacao).HasDefaultValueSql("(getdate())");
-
 				entity.HasOne(d => d.CodigoStatusTarefaNavigation).WithMany(p => p.Tarefas).HasConstraintName("FK__Tarefa__CodigoSt__2E1BDC42");
 
 				entity.HasOne(d => d.CodigoUsuarioNavigation).WithMany(p => p.Tarefas).HasConstraintName("FK__Tarefa__CodigoUs__2D27B809");
