@@ -12,11 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Interface\Repositories\" />
-    <Folder Include="Interface\Services\" />
     <Folder Include="Queries\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -15,7 +15,6 @@
     <Folder Include="Data\Context\" />
     <Folder Include="Data\Migrations\" />
     <Folder Include="Data\EntitiesConfiguration\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>

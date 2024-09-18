@@ -19,13 +19,10 @@ namespace Back_End.Domain.Models
 		[StringLength(500)]
 		public string DescricaoTarefa { get; set; }
 
-		public DateOnly DataRealizacao { get; set; }
-
 		public int? CodigoStatusTarefa { get; set; }
 
 		[Column(TypeName = "datetime")]
 		public DateTime? DataCriacao { get; set; }
-
 		[ForeignKey("CodigoStatusTarefa")]
 		[InverseProperty("Tarefas")]
 		public virtual StatusTarefa CodigoStatusTarefaNavigation { get; set; }
