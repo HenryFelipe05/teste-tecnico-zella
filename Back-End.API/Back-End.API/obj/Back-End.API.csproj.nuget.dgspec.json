@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\Back-End.API.csproj": {}
+    "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.API\\Back-End.API.csproj": {}
   },
   "projects": {
-    "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\Back-End.API.csproj": {
+    "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.API\\Back-End.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\Back-End.API.csproj",
+        "projectUniqueName": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.API\\Back-End.API.csproj",
         "projectName": "Back-End.API",
-        "projectPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\Back-End.API.csproj",
+        "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.API\\Back-End.API.csproj",
         "packagesPath": "C:\\Users\\inliv\\.nuget\\packages\\",
-        "outputPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\obj\\",
+        "outputPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj": {
-                "projectPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj"
+              "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj": {
+                "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj"
               },
-              "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj": {
-                "projectPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj"
+              "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj": {
+                "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj"
               }
             }
           }
@@ -52,6 +52,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -69,6 +73,18 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.7.3, )"
             }
           },
           "imports": [
@@ -94,14 +110,14 @@
         }
       }
     },
-    "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj": {
+    "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj",
+        "projectUniqueName": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj",
         "projectName": "Back-End.Application",
-        "projectPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj",
+        "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj",
         "packagesPath": "C:\\Users\\inliv\\.nuget\\packages\\",
-        "outputPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\obj\\",
+        "outputPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -123,8 +139,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj": {
-                "projectPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj"
+              "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj": {
+                "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj"
               }
             }
           }
@@ -139,6 +155,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -152,6 +172,18 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.7.3, )"
             }
           },
           "imports": [
@@ -174,14 +206,14 @@
         }
       }
     },
-    "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj": {
+    "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj",
+        "projectUniqueName": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj",
         "projectName": "Back-End.Domain",
-        "projectPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj",
+        "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj",
         "packagesPath": "C:\\Users\\inliv\\.nuget\\packages\\",
-        "outputPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Domain\\obj\\",
+        "outputPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -215,6 +247,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -228,6 +264,18 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.7.3, )"
             }
           },
           "imports": [
@@ -250,14 +298,14 @@
         }
       }
     },
-    "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj": {
+    "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj",
+        "projectUniqueName": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj",
         "projectName": "Back-End.Infra",
-        "projectPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj",
+        "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Infra\\Back-End.Infra.csproj",
         "packagesPath": "C:\\Users\\inliv\\.nuget\\packages\\",
-        "outputPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\obj\\",
+        "outputPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -279,8 +327,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj": {
-                "projectPath": "C:\\OneDrive\\Área de Trabalho\\cadastroLivros\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj"
+              "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj": {
+                "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj"
               }
             }
           }
@@ -295,6 +343,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -308,6 +360,18 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.7.3, )"
             }
           },
           "imports": [

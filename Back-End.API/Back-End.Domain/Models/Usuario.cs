@@ -32,10 +32,22 @@ namespace Back_End.Domain.Models
 		[InverseProperty("CodigoUsuarioNavigation")]
 		public virtual ICollection<Tarefa> Tarefas { get; set; } = new List<Tarefa>();
 
-		public static bool ValidarFormatoEmail(string email)
+        public Usuario(int codigoUsuario, string email)
+        {
+			CodigoUsuario = codigoUsuario;
+			Email = email;
+        }
+
+        public static bool ValidarFormatoEmail(string email)
 		{
 			var regexEmail = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 			return Regex.IsMatch(email, regexEmail);
 		}
+
+		public void AlterarSenha(string senha)
+		{	
+			Senha = senha;
+		}
+
 	}
 }
