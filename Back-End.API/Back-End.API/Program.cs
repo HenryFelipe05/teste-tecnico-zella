@@ -19,6 +19,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ITarefaRepository, TarefaRepository>();
 builder.Services.AddScoped<ITarefaService, TarefaService>();
 
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

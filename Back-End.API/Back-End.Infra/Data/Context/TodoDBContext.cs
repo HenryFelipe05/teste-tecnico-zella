@@ -43,8 +43,6 @@ namespace Back_End.Infra.Data.Context
 			{
 				entity.HasKey(e => e.CodigoUsuario).HasName("PK__Usuario__F0C18F58C7448923");
 
-				entity.Property(e => e.DataCriacao).HasDefaultValueSql("(getdate())");
-
 				entity.HasOne(d => d.CodigoGeneroNavigation).WithMany(p => p.Usuarios).HasConstraintName("FK__Usuario__CodigoG__276EDEB3");
 			});
 

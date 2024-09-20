@@ -1,7 +1,6 @@
 ﻿using Back_End.Application.Commands;
 using Back_End.Application.Interface.Repositories;
 using Back_End.Application.Interface.Services;
-using Back_End.Application.Queries;
 using Back_End.Domain.Models;
 
 namespace Back_End.Application.Services
@@ -17,6 +16,12 @@ namespace Back_End.Application.Services
 
         public async Task AdicionarTarefaAsync(TarefaCommand tarefaCommand)
 		{
+			if (string.IsNullOrWhiteSpace(tarefaCommand.NomeTarefa))
+				throw new ArgumentException("O nome da tarefa não pode ser vazio.");
+
+			if (tarefaCommand.CodigoStatusTarefa <= 0)
+				throw new ArgumentException("O Código do status da tarefa inválido.");
+
 			var novaTarefa = new Tarefa
 			{
 				CodigoUsuario = tarefaCommand.CodigoUsuario,
@@ -28,21 +33,21 @@ namespace Back_End.Application.Services
 			await _tarefaRepository.AdicionarTarefaAsync(novaTarefa);
 		}
 
-		public async Task AlterarTarefaAsync(TarefaQuery tarefaQuery, int codigoTarefa, int codigoUsuario)
+		public async Task AlterarTarefaAsync(TarefaCommand tarefaCommand, int codigoTarefa, int codigoUsuario)
 		{
-			if (string.IsNullOrWhiteSpace(tarefaQuery.NomeTarefa))
+			if (string.IsNullOrWhiteSpace(tarefaCommand.NomeTarefa))
 				throw new ArgumentException("O nome da tarefa não pode ser vazio.");
 
-			if (tarefaQuery.CodigoStatusTarefa == null)
-				throw new ArgumentException("O Código do status da tarefa não pode ser vazio.");
+			if (tarefaCommand.CodigoStatusTarefa <= 0)
+				throw new ArgumentException("O Código do status da tarefa inválido.");
 
 			var novaTarefa = new Tarefa
 			{ 
 				CodigoTarefa = codigoTarefa,
 				CodigoUsuario = codigoUsuario,
-				NomeTarefa = tarefaQuery.NomeTarefa,
-				DescricaoTarefa = tarefaQuery.DescricaoTarefa,
-				CodigoStatusTarefa = tarefaQuery.CodigoStatusTarefa
+				NomeTarefa = tarefaCommand.NomeTarefa,
+				DescricaoTarefa = tarefaCommand.DescricaoTarefa,
+				CodigoStatusTarefa = tarefaCommand.CodigoStatusTarefa
 			};
 
 			await _tarefaRepository.AlterarTarefaAsync(novaTarefa);

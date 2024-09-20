@@ -1,6 +1,7 @@
 ﻿#nullable disable
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Back_End.Domain.Models
@@ -22,18 +23,7 @@ namespace Back_End.Domain.Models
 		[Unicode(false)]
 		public string Email { get; set; }
 
-		[StringLength(20)]
-		public string Telefone { get; set; }
-
-		public DateOnly? DataNascimento { get; set; }
-
 		public int? CodigoGenero { get; set; }
-
-		[Column(TypeName = "datetime")]
-		public DateTime? DataCriacao { get; set; }
-
-		[Column(TypeName = "datetime")]
-		public DateTime? UltimoLogin { get; set; }
 
 		[ForeignKey("CodigoGenero")]
 		[InverseProperty("Usuarios")]
@@ -41,5 +31,11 @@ namespace Back_End.Domain.Models
 
 		[InverseProperty("CodigoUsuarioNavigation")]
 		public virtual ICollection<Tarefa> Tarefas { get; set; } = new List<Tarefa>();
+
+		public static bool ValidarFormatoEmail(string email)
+		{
+			var regexEmail = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+			return Regex.IsMatch(email, regexEmail);
+		}
 	}
 }
