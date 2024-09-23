@@ -1,5 +1,6 @@
 ﻿#nullable disable
 using Back_End.Application.Interface.Repositories;
+using Back_End.Application.Queries;
 using Back_End.Domain.Models;
 using Back_End.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
@@ -33,14 +34,29 @@ namespace Back_End.Infra.Repositories
 			await _dbcontext.SaveChangesAsync();
 		}
 
-		public async Task<Tarefa> RecuperarDetalhesTarefaAsync(int codigoTarefa)
+		public async Task<TarefaQuery> RecuperarDetalhesTarefaAsync(int codigoTarefa)
 		{
-			return await _dbcontext.Tarefas.Where(t => t.CodigoTarefa == codigoTarefa).FirstOrDefaultAsync();
+			return await _dbcontext.Tarefas.Where(t => t.CodigoTarefa == codigoTarefa)
+			.Select(t => new TarefaQuery
+            {
+                CodigoTarefa = t.CodigoTarefa,
+				CodigoUsuario = t.CodigoUsuario,
+				NomeTarefa = t.NomeTarefa,
+				DescricaoTarefa = t.DescricaoTarefa,
+				CodigoStatusTarefa = t.CodigoStatusTarefa,
+            }).FirstOrDefaultAsync();
 		}
 
-		public async Task<IEnumerable<Tarefa>> RecuperarTarefasUsuarioAsync(int codigoUsuario)
+		public async Task<IEnumerable<TarefaQuery>> RecuperarTarefasUsuarioAsync(int codigoUsuario)
 		{
-			return await _dbcontext.Tarefas.Where(t => t.CodigoUsuario == codigoUsuario).ToListAsync();
+			return await _dbcontext.Tarefas.Where(t => t.CodigoUsuario == codigoUsuario).Select(t => new TarefaQuery
+            {
+                CodigoTarefa = t.CodigoTarefa,
+                CodigoUsuario = t.CodigoUsuario,
+                NomeTarefa = t.NomeTarefa,
+                DescricaoTarefa = t.DescricaoTarefa,
+                CodigoStatusTarefa = t.CodigoStatusTarefa,
+            }).ToListAsync();
 		}
 	}
 }

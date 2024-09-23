@@ -59,7 +59,7 @@ namespace Back_End.API.Controllers
 		[HttpPut]
 		public async Task<ActionResult> AlterarTarefa([FromQuery] int codigoTarefa, [FromBody] TarefaCommand tarefaCommand)
 		{
-			if (codigoTarefa <= 0)
+			if (codigoTarefa < 0)
 				return BadRequest("Código da tarefa inválido.");
 
 			await _tarefaService.AlterarTarefaAsync(tarefaCommand, codigoTarefa, 1);

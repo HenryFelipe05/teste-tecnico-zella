@@ -28,5 +28,17 @@ namespace Back_End.Domain.Models
 		[ForeignKey("CodigoUsuario")]
 		[InverseProperty("Tarefas")]
 		public virtual Usuario CodigoUsuarioNavigation { get; set; }
+
+		public static Tarefa MapearDadosTarefa(string NomeTarefa, string DescricaoTarefa, int? codigoUsuario, int? codigoStatusTarefa, int? codigoTarefa = null)
+		{
+			return new Tarefa 
+			{
+				CodigoTarefa = codigoTarefa ?? 0,
+				CodigoUsuario = codigoUsuario,
+				NomeTarefa = NomeTarefa,
+				DescricaoTarefa = DescricaoTarefa,
+				CodigoStatusTarefa = codigoStatusTarefa
+			};
+		}
 	}
 }

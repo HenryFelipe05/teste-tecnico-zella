@@ -32,10 +32,15 @@ namespace Back_End.Domain.Models
 		[InverseProperty("CodigoUsuarioNavigation")]
 		public virtual ICollection<Tarefa> Tarefas { get; set; } = new List<Tarefa>();
 
-        public Usuario(int codigoUsuario, string email)
+        public static Usuario MapearDadosUsuario(string email, string senha, int? codigoGenero, int? codigoUsuario = null)
         {
-			CodigoUsuario = codigoUsuario;
-			Email = email;
+            return new Usuario
+            {
+                CodigoUsuario = codigoUsuario ?? 0, 
+                Email = email,
+                Senha = senha,
+                CodigoGenero = codigoGenero
+            };
         }
 
         public static bool ValidarFormatoEmail(string email)
@@ -48,6 +53,5 @@ namespace Back_End.Domain.Models
 		{	
 			Senha = senha;
 		}
-
 	}
 }

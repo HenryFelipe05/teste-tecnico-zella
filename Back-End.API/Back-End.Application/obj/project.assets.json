@@ -3984,24 +3984,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\inliv\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\henry\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj",
+      "projectUniqueName": "C:\\Users\\henry\\OneDrive\\Área de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj",
       "projectName": "Back-End.Application",
-      "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj",
-      "packagesPath": "C:\\Users\\inliv\\.nuget\\packages\\",
-      "outputPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Application\\obj\\",
+      "projectPath": "C:\\Users\\henry\\OneDrive\\Área de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Back-End.Application.csproj",
+      "packagesPath": "C:\\Users\\henry\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\henry\\OneDrive\\Área de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\inliv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\henry\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4016,8 +4011,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj": {
-              "projectPath": "C:\\OneDrive\\Área de Trabalho\\exercicios\\SistemaBiblioteca\\cadastroLivros\\cadastroDeLivros API\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj"
+            "C:\\Users\\henry\\OneDrive\\Área de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj": {
+              "projectPath": "C:\\Users\\henry\\OneDrive\\Área de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Domain\\Back-End.Domain.csproj"
             }
           }
         }
@@ -4026,6 +4021,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4079,7 +4079,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

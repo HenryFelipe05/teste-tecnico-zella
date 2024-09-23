@@ -1,6 +1,7 @@
 ﻿using Back_End.Application.Commands;
 using Back_End.Application.Interface.Repositories;
 using Back_End.Application.Interface.Services;
+using Back_End.Application.Queries;
 using Back_End.Domain.Models;
 
 namespace Back_End.Application.Services
@@ -22,15 +23,9 @@ namespace Back_End.Application.Services
 			if (tarefaCommand.CodigoStatusTarefa <= 0)
 				throw new ArgumentException("O Código do status da tarefa inválido.");
 
-			var novaTarefa = new Tarefa
-			{
-				CodigoUsuario = tarefaCommand.CodigoUsuario,
-				NomeTarefa = tarefaCommand.NomeTarefa,
-				DescricaoTarefa = tarefaCommand.DescricaoTarefa,
-				CodigoStatusTarefa = tarefaCommand.CodigoStatusTarefa
-			};
+			var dadosTarefa = Tarefa.MapearDadosTarefa(tarefaCommand.NomeTarefa, tarefaCommand.DescricaoTarefa, tarefaCommand.CodigoUsuario, tarefaCommand.CodigoStatusTarefa);
 
-			await _tarefaRepository.AdicionarTarefaAsync(novaTarefa);
+			await _tarefaRepository.AdicionarTarefaAsync(dadosTarefa);
 		}
 
 		public async Task AlterarTarefaAsync(TarefaCommand tarefaCommand, int codigoTarefa, int codigoUsuario)
@@ -41,34 +36,29 @@ namespace Back_End.Application.Services
 			if (tarefaCommand.CodigoStatusTarefa <= 0)
 				throw new ArgumentException("O Código do status da tarefa inválido.");
 
-			var novaTarefa = new Tarefa
-			{ 
-				CodigoTarefa = codigoTarefa,
-				CodigoUsuario = codigoUsuario,
-				NomeTarefa = tarefaCommand.NomeTarefa,
-				DescricaoTarefa = tarefaCommand.DescricaoTarefa,
-				CodigoStatusTarefa = tarefaCommand.CodigoStatusTarefa
-			};
+            var dadosTarefa = Tarefa.MapearDadosTarefa(tarefaCommand.NomeTarefa, tarefaCommand.DescricaoTarefa, codigoUsuario, tarefaCommand.CodigoStatusTarefa, codigoTarefa);
 
-			await _tarefaRepository.AlterarTarefaAsync(novaTarefa);
+            await _tarefaRepository.AlterarTarefaAsync(dadosTarefa);
 		}
 
 		public async Task ExcluirTarefaAsync(int codigoTarefa)
 		{
-			var tarefaExistente = await _tarefaRepository.RecuperarDetalhesTarefaAsync(codigoTarefa);
+			var tarefa = await _tarefaRepository.RecuperarDetalhesTarefaAsync(codigoTarefa);
 
-			if (tarefaExistente == null)
+			if (tarefa == null)
 				throw new KeyNotFoundException("Tarefa não encontrada.");
+
+			var tarefaMapeada = Tarefa.MapearDadosTarefa(tarefa.NomeTarefa, tarefa.DescricaoTarefa, tarefa.CodigoUsuario, tarefa.CodigoStatusTarefa, tarefa.CodigoTarefa);
 			
-			await _tarefaRepository.ExcluirTarefaAsync(tarefaExistente);
+			await _tarefaRepository.ExcluirTarefaAsync(tarefaMapeada);
 		}
 
-		public async Task<Tarefa> RecuperarDetalhesTarefaAsync(int codigoTarefa)
+		public async Task<TarefaQuery> RecuperarDetalhesTarefaAsync(int codigoTarefa)
 		{
 			return await _tarefaRepository.RecuperarDetalhesTarefaAsync(codigoTarefa);
 		}
 
-		public async Task<IEnumerable<Tarefa>> RecuperarTarefasUsuarioAsync(int codigoUsuario)
+		public async Task<IEnumerable<TarefaQuery>> RecuperarTarefasUsuarioAsync(int codigoUsuario)
 		{
 			return await _tarefaRepository.RecuperarTarefasUsuarioAsync(codigoUsuario);
 		}

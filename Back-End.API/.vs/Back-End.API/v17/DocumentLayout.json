@@ -1,0 +1,203 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A161D46A-9946-49BD-AA65-73DDD0D2C1E0}|Back-End.API\\Back-End.API.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A161D46A-9946-49BD-AA65-73DDD0D2C1E0}|Back-End.API\\Back-End.API.csproj|solutionrelative:back-end.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A161D46A-9946-49BD-AA65-73DDD0D2C1E0}|Back-End.API\\Back-End.API.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.api\\controllers\\tarefacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A161D46A-9946-49BD-AA65-73DDD0D2C1E0}|Back-End.API\\Back-End.API.csproj|solutionrelative:back-end.api\\controllers\\tarefacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E45704B7-1F83-4DC8-9952-83B43906041F}|Back-End.Infra\\Back-End.Infra.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.infra\\data\\identity\\authenticateservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E45704B7-1F83-4DC8-9952-83B43906041F}|Back-End.Infra\\Back-End.Infra.csproj|solutionrelative:back-end.infra\\data\\identity\\authenticateservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A161D46A-9946-49BD-AA65-73DDD0D2C1E0}|Back-End.API\\Back-End.API.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A161D46A-9946-49BD-AA65-73DDD0D2C1E0}|Back-End.API\\Back-End.API.csproj|solutionrelative:back-end.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.application\\queries\\tokenusuarioquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|solutionrelative:back-end.application\\queries\\tokenusuarioquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.application\\interface\\services\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|solutionrelative:back-end.application\\interface\\services\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|solutionrelative:back-end.application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E45704B7-1F83-4DC8-9952-83B43906041F}|Back-End.Infra\\Back-End.Infra.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.infra\\repositories\\tarefarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E45704B7-1F83-4DC8-9952-83B43906041F}|Back-End.Infra\\Back-End.Infra.csproj|solutionrelative:back-end.infra\\repositories\\tarefarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.application\\queries\\usuarioquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|solutionrelative:back-end.application\\queries\\usuarioquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|c:\\users\\henry\\onedrive\\\u00E1rea de trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\back-end.api\\back-end.application\\services\\tarefaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E793F09-3DC9-4C84-B3AE-E7CC0D8E7681}|Back-End.Application\\Back-End.Application.csproj|solutionrelative:back-end.application\\services\\tarefaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TarefaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\Repositories\\TarefaRepository.cs",
+              "RelativeDocumentMoniker": "Back-End.Infra\\Repositories\\TarefaRepository.cs",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\Repositories\\TarefaRepository.cs",
+              "RelativeToolTip": "Back-End.Infra\\Repositories\\TarefaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:28:02.984Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "Back-End.Application\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "Back-End.Application\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T22:30:57.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Interface\\Services\\IUsuarioService.cs",
+              "RelativeDocumentMoniker": "Back-End.Application\\Interface\\Services\\IUsuarioService.cs",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Interface\\Services\\IUsuarioService.cs",
+              "RelativeToolTip": "Back-End.Application\\Interface\\Services\\IUsuarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T22:30:38.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TokenUsuarioQuery.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Queries\\TokenUsuarioQuery.cs",
+              "RelativeDocumentMoniker": "Back-End.Application\\Queries\\TokenUsuarioQuery.cs",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Queries\\TokenUsuarioQuery.cs",
+              "RelativeToolTip": "Back-End.Application\\Queries\\TokenUsuarioQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T22:18:09.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Back-End.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\appsettings.json",
+              "RelativeToolTip": "Back-End.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-22T22:00:20.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthenticateServicecs.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\Data\\Identity\\AuthenticateServicecs.cs",
+              "RelativeDocumentMoniker": "Back-End.Infra\\Data\\Identity\\AuthenticateServicecs.cs",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Infra\\Data\\Identity\\AuthenticateServicecs.cs",
+              "RelativeToolTip": "Back-End.Infra\\Data\\Identity\\AuthenticateServicecs.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T21:44:43.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TarefaController.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\Controllers\\TarefaController.cs",
+              "RelativeDocumentMoniker": "Back-End.API\\Controllers\\TarefaController.cs",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\Controllers\\TarefaController.cs",
+              "RelativeToolTip": "Back-End.API\\Controllers\\TarefaController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:30:36.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Back-End.API\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.API\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Back-End.API\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowD4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:30:36.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioQuery.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Queries\\UsuarioQuery.cs",
+              "RelativeDocumentMoniker": "Back-End.Application\\Queries\\UsuarioQuery.cs",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Queries\\UsuarioQuery.cs",
+              "RelativeToolTip": "Back-End.Application\\Queries\\UsuarioQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:30:21.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TarefaService.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Services\\TarefaService.cs",
+              "RelativeDocumentMoniker": "Back-End.Application\\Services\\TarefaService.cs",
+              "ToolTip": "C:\\Users\\henry\\OneDrive\\\u00C1rea de Trabalho\\teste-tecnico-zella\\teste-tecnico-zella\\Back-End.API\\Back-End.Application\\Services\\TarefaService.cs",
+              "RelativeToolTip": "Back-End.Application\\Services\\TarefaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:28:05.449Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

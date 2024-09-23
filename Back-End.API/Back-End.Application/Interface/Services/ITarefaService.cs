@@ -6,8 +6,8 @@ namespace Back_End.Application.Interface.Services
 {
 	public interface ITarefaService
 	{
-		Task<IEnumerable<Tarefa>> RecuperarTarefasUsuarioAsync(int codigoUsuario);
-		Task<Tarefa> RecuperarDetalhesTarefaAsync(int codigoTarefa);
+		Task<IEnumerable<TarefaQuery>> RecuperarTarefasUsuarioAsync(int codigoUsuario);
+		Task<TarefaQuery> RecuperarDetalhesTarefaAsync(int codigoTarefa);
 		Task AdicionarTarefaAsync(TarefaCommand novaTarefa);
 		Task AlterarTarefaAsync(TarefaCommand tarefaCommand, int codigoTarefa, int codigoUsuario);
 		Task ExcluirTarefaAsync(int codigoTarefa);

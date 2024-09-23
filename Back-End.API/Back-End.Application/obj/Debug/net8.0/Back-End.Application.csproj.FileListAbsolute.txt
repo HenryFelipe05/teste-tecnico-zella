@@ -34,3 +34,21 @@ C:\OneDrive\Área de Trabalho\exercicios\SistemaBiblioteca\cadastroLivros\cadast
 C:\OneDrive\Área de Trabalho\exercicios\SistemaBiblioteca\cadastroLivros\cadastroDeLivros API\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.pdb
 C:\OneDrive\Área de Trabalho\exercicios\SistemaBiblioteca\cadastroLivros\cadastroDeLivros API\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.genruntimeconfig.cache
 C:\OneDrive\Área de Trabalho\exercicios\SistemaBiblioteca\cadastroLivros\cadastroDeLivros API\Back-End.API\Back-End.Application\obj\Debug\net8.0\ref\Back-End.Application.dll
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.csproj.AssemblyReference.cache
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.AssemblyInfoInputs.cache
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.AssemblyInfo.cs
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.csproj.CoreCompileInputs.cache
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.sourcelink.json
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.dll
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\refint\Back-End.Application.dll
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.pdb
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\bin\Debug\net8.0\Back-End.Application.deps.json
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\bin\Debug\net8.0\Back-End.Application.runtimeconfig.json
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\bin\Debug\net8.0\Back-End.Application.dll
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\bin\Debug\net8.0\Back-End.Application.pdb
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\bin\Debug\net8.0\Back-End.Domain.dll
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\bin\Debug\net8.0\Back-End.Domain.pdb
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.47D87297.Up2Date
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\Back-End.Application.genruntimeconfig.cache
+C:\Users\henry\OneDrive\Área de Trabalho\teste-tecnico-zella\teste-tecnico-zella\Back-End.API\Back-End.Application\obj\Debug\net8.0\ref\Back-End.Application.dll
