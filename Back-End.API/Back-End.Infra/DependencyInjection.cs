@@ -24,6 +24,14 @@ namespace Back_End.Infra
 				options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 			});
 
+			services.AddCors(options =>
+			{
+				options.AddPolicy("AllowSpecificOrigin", builder =>
+					builder.WithOrigins("http://localhost:54652")
+						   .AllowAnyMethod()
+						   .AllowAnyHeader());
+			});
+
 			services.AddAuthentication(options => 
 			{ 
 				options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
