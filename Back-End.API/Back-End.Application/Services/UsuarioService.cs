@@ -15,7 +15,7 @@ namespace Back_End.Application.Services
             _usuarioRepository = usuarioRepository;
         }
 
-        public async Task AdicionarUsuarioAsync(UsuarioCommand usuarioCommand)
+        public async Task<UsuarioQuery> AdicionarUsuarioAsync(UsuarioCommand usuarioCommand)
         {
             if (string.IsNullOrWhiteSpace(usuarioCommand.Email))
                 throw new ArgumentException("O email do usuário não pode ser vazio.");
@@ -31,7 +31,7 @@ namespace Back_End.Application.Services
 
             var novoUsuario = Usuario.MapearDadosUsuario(usuarioCommand.Email, usuarioCommand.Senha, usuarioCommand.CodigoGenero);
 
-            await _usuarioRepository.AdicionarUsuarioAsync(novoUsuario);
+			return await _usuarioRepository.AdicionarUsuarioAsync(novoUsuario);
         }
 
         public async Task AtualizarUsuarioAsync(UsuarioCommand usuarioCommand, int codigoUsuario)

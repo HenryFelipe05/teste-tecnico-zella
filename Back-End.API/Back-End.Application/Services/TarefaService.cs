@@ -15,7 +15,7 @@ namespace Back_End.Application.Services
             _tarefaRepository = tarefaRepository;
         }
 
-        public async Task AdicionarTarefaAsync(TarefaCommand tarefaCommand)
+        public async Task AdicionarTarefaAsync(TarefaCommand tarefaCommand, int codigoUsuario)
 		{
 			if (string.IsNullOrWhiteSpace(tarefaCommand.NomeTarefa))
 				throw new ArgumentException("O nome da tarefa não pode ser vazio.");
@@ -23,7 +23,7 @@ namespace Back_End.Application.Services
 			if (tarefaCommand.CodigoStatusTarefa <= 0)
 				throw new ArgumentException("O Código do status da tarefa inválido.");
 
-			var dadosTarefa = Tarefa.MapearDadosTarefa(tarefaCommand.NomeTarefa, tarefaCommand.DescricaoTarefa, tarefaCommand.CodigoUsuario, tarefaCommand.CodigoStatusTarefa);
+			var dadosTarefa = Tarefa.MapearDadosTarefa(tarefaCommand.NomeTarefa, tarefaCommand.DescricaoTarefa, codigoUsuario, tarefaCommand.CodigoStatusTarefa);
 
 			await _tarefaRepository.AdicionarTarefaAsync(dadosTarefa);
 		}

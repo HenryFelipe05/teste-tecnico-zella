@@ -2,7 +2,9 @@
 using Back_End.Application.Interface.Repositories;
 using Back_End.Application.Interface.Services;
 using Back_End.Application.Services;
+using Back_End.Domain.Account;
 using Back_End.Infra.Data.Context;
+using Back_End.Infra.Data.Identity;
 using Back_End.Infra.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -30,12 +32,10 @@ namespace Back_End.Infra
 			{
 				options.TokenValidationParameters = new TokenValidationParameters
 				{
-					ValidateIssuer = true,
-					ValidateAudience = true,
+					ValidateIssuer = false,
+					ValidateAudience = false,
 					ValidateLifetime = true,
 					ValidateIssuerSigningKey = true,
-					ValidIssuer = configuration["Jwt:Issuer"],
-					ValidAudience = configuration["Jwt:Audience"],
 					IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"])),
 					ClockSkew = TimeSpan.Zero
 				};
@@ -49,6 +49,7 @@ namespace Back_End.Infra
 			#region [ Services ]
 			services.AddScoped<ITarefaService, TarefaService>();
 			services.AddScoped<IUsuarioService, UsuarioService>();
+			services.AddScoped<IAuthenticate, AuthenticateService>();
 			#endregion
 
 			return services;

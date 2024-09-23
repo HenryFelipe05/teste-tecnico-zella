@@ -2,28 +2,26 @@
 using Back_End.Application.Commands;
 using Back_End.Application.Interface.Services;
 using Back_End.Application.Queries;
-using Back_End.Domain.Account;
-using Back_End.Domain.Models;
+using Back_End.Infra;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Back_End.API.Controllers
 {
-    [Route("api/[controller]")]
+	[Route("api/[controller]")]
     [ApiController]
-    public class UsuarioController : ControllerBase
+	[Authorize]
+	public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioService _usuararioService;
-        private readonly IAuthenticate _authenticate;
 
-        public UsuarioController(IUsuarioService usuararioService, 
-                                 IAuthenticate authenticate)
+        public UsuarioController(IUsuarioService usuararioService)
         {
             _usuararioService = usuararioService;
-            _authenticate = authenticate;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Usuario>>> RecuperarTodosUsuarios()
+        [HttpGet("usuarios")]
+		public async Task<ActionResult<IEnumerable<UsuarioQuery>>> RecuperarTodosUsuarios()
         {
             var usuarios = await _usuararioService.RecuperarTodosUsuariosAsync();
 
@@ -33,13 +31,10 @@ namespace Back_End.API.Controllers
                 return Ok(usuarios);
         }
 
-        [HttpGet("{codigoUsuario}")]
-        public async Task<ActionResult<Usuario>> RecuperarUsuario([FromRoute] int codigoUsuario)
+        [HttpGet("usuario")]
+		public async Task<ActionResult<UsuarioQuery>> RecuperarUsuario()
         {
-            if (codigoUsuario < 0)
-                return BadRequest("Código do usuário inválido.");
-
-            var usuario = await _usuararioService.RecuperarUsuarioAsync(codigoUsuario);
+            var usuario = await _usuararioService.RecuperarUsuarioAsync(User.RecuperarCodigoUsuario());
 
             if (usuario == null)
                 return NoContent();
@@ -47,34 +42,13 @@ namespace Back_End.API.Controllers
                 return Ok(usuario);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<TokenUsuarioQuery>> AdicionarUsuario([FromBody] UsuarioCommand usuarioCommand)
+        [HttpPut("atualizar-usuario")]
+		public async Task<ActionResult> AtualizarUsuario([FromBody] UsuarioCommand usuarioCommand)
         {
             if (usuarioCommand == null)
                 return BadRequest("Dados inválidos.");
 
-            var emailExiste = await _authenticate.UsuarioExiste(usuarioCommand.Email);
-
-            if (emailExiste)
-                return BadRequest("Esse e-mail já possui uma conta vinculada.");
-
-            await _usuararioService.AdicionarUsuarioAsync(usuarioCommand);
-
-            var token =  await _authenticate.GerarToken()
-
-            return Created();
-        }
-
-        [HttpPut]
-        public async Task<ActionResult> AtualizarUsuario([FromBody] UsuarioCommand usuarioCommand, [FromQuery] int codigoUsuario)
-        {
-            if (usuarioCommand == null)
-                return BadRequest("Dados inválidos.");
-
-            if (codigoUsuario < 0)
-                return BadRequest("Código do usuário inválido.");
-
-            await _usuararioService.AtualizarUsuarioAsync(usuarioCommand, codigoUsuario);
+            await _usuararioService.AtualizarUsuarioAsync(usuarioCommand, User.RecuperarCodigoUsuario());
 
             return Ok("Usuário atualizado com sucesso.");
         }

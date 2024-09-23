@@ -16,10 +16,12 @@ namespace Back_End.Infra.Repositories
 			_dbcontext = dbcontext;
 		}
 
-		public async Task AdicionarUsuarioAsync(Usuario novoUsuario)
+		public async Task<UsuarioQuery> AdicionarUsuarioAsync(Usuario novoUsuario)
 		{
 			await _dbcontext.Usuarios.AddAsync(novoUsuario);
 			await _dbcontext.SaveChangesAsync();
+
+			return UsuarioQuery.MapearParaUsuarioQuery(novoUsuario);
 		}
 
 		public async Task AtualizarUsuarioAsync(Usuario usuario)
@@ -35,6 +37,7 @@ namespace Back_End.Infra.Repositories
 			{
 				CodigoUsuario = u.CodigoUsuario,
 				Email = u.Email,
+				Senha = u.Senha,
 				CodigoGenero = u.CodigoGenero
 			}).ToListAsync();
 		}
@@ -46,6 +49,7 @@ namespace Back_End.Infra.Repositories
 			{
 				CodigoUsuario = u.CodigoUsuario,
 				Email = u.Email,
+				Senha = u.Senha,
 				CodigoGenero = u.CodigoGenero
 			}).FirstOrDefaultAsync();
 		}

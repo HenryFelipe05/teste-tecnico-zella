@@ -1,13 +1,15 @@
 ﻿using Back_End.Application.Commands;
 using Back_End.Application.Interface.Services;
-using Back_End.Application.Queries;
 using Back_End.Domain.Models;
+using Back_End.Infra;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Back_End.API.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
+	[Authorize]
 	public class TarefaController : ControllerBase
 	{
 		public readonly ITarefaService _tarefaService;
@@ -17,13 +19,10 @@ namespace Back_End.API.Controllers
 			_tarefaService = tarefaService;
 		}
 
-		[HttpGet("{codigoUsuario}")]
-		public async Task<ActionResult<IEnumerable<Tarefa>>> RecuperarTarefasUsuario([FromRoute] int codigoUsuario)
+		[HttpGet("tarefas-usuario")]
+		public async Task<ActionResult<IEnumerable<Tarefa>>> RecuperarTarefasUsuario()
 		{
-			if (codigoUsuario <= 0)
-				return BadRequest("Código do usuário inválido.");
-
-			var tarefas = await _tarefaService.RecuperarTarefasUsuarioAsync(codigoUsuario);
+			var tarefas = await _tarefaService.RecuperarTarefasUsuarioAsync(User.RecuperarCodigoUsuario());
 
 			if (tarefas == null)
 				return NoContent();
@@ -31,7 +30,7 @@ namespace Back_End.API.Controllers
 				return Ok(tarefas);
 		}
 
-		[HttpGet]
+		[HttpGet("detalhes-tarefa")]
 		public async Task<ActionResult<Tarefa>> RecuperarDetalhesTarefa([FromQuery] int codigoTarefa)
 		{
 			if (codigoTarefa <= 0)
@@ -45,28 +44,28 @@ namespace Back_End.API.Controllers
 				return Ok(tarefa);
 		}
 
-		[HttpPost]
+		[HttpPost("nova-tarefa")]
 		public async Task<ActionResult> AdicionarNovaTarefa([FromBody] TarefaCommand tarefaCommand)
 		{
 			if (tarefaCommand == null)
 				return BadRequest();
 
-			await _tarefaService.AdicionarTarefaAsync(tarefaCommand);
+			await _tarefaService.AdicionarTarefaAsync(tarefaCommand, User.RecuperarCodigoUsuario());
 
 			return Created();
 		}
 
-		[HttpPut]
+		[HttpPut("alterar-tarefa")]
 		public async Task<ActionResult> AlterarTarefa([FromQuery] int codigoTarefa, [FromBody] TarefaCommand tarefaCommand)
 		{
 			if (codigoTarefa < 0)
 				return BadRequest("Código da tarefa inválido.");
 
-			await _tarefaService.AlterarTarefaAsync(tarefaCommand, codigoTarefa, 1);
+			await _tarefaService.AlterarTarefaAsync(tarefaCommand, codigoTarefa, User.RecuperarCodigoUsuario());
 			return Ok();	
 		}
 
-		[HttpDelete]
+		[HttpDelete("excluir-tarefa")]
 		public async Task<ActionResult> ExcluirTarefa([FromQuery] int codigoTarefa)
 		{
 			if (codigoTarefa <= 0)
