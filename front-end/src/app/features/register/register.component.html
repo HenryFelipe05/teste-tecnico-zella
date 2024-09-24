@@ -1,34 +1,35 @@
-<div class="register-container">
-    <h2>CRIAR CONTA</h2>
-    <form (submit)="onRegister()" class="form-register">
-      <div class="input-form">
-        <label for="email">Email</label>
-        <input type="email" id="email" [(ngModel)]="email" name="email" required />
-      </div>
-  
-      <div class="input-form">
-        <label for="senha">Senha</label>
+<div class="primary-container">
+  <h2>CRIAR CONTA</h2>
+  <form (submit)="onRegister()" class="form-register">
+    <div class="input-form">
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required />
+    </div>
+
+    <div class="input-form">
+      <label for="senha">Senha</label>
+      <div class="password-confirm">
         <input type="password" id="senha" [(ngModel)]="senha" name="senha" required />
         <input type="password" id="senha-confirmada" [(ngModel)]="senhaConfirmada" name="senha-confirmada" required />
       </div>
+    </div>
 
-      <div class="input-form">
-        <label for="genero">Genero</label>
-        <select class="select-genero" name="genero" [(ngModel)]="codigoGenero">
-            <option disabled selected>Selecione</option>
-            <option value=1>Masculino</option>
-            <option value=2>Feminino</option>
-            <option value=3>Não Informar</option>
-        </select>
-      </div>
-  
-      <div *ngIf="mensagemErro" class="error-message">{{mensagemErro}}</div>
-  
-      <button type="submit">Cadastrar</button>
-    </form>
-    
-    <p>Ou</p>
+    <div class="input-form">
+      <label for="genero">Genero</label>
+      <select class="select-genero" name="genero" [(ngModel)]="codigoGenero">
+        <option disabled selected>Selecione</option>
+        <option value=1>Masculino</option>
+        <option value=2>Feminino</option>
+        <option value=3>Não Informar</option>
+      </select>
+    </div>
 
-    <button (click)="goToLogin()" class="login">Login</button>
-  </div>
+    <div *ngIf="mensagemErro" class="error-message">{{mensagemErro}}</div>
 
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
+
+  <p>Ou</p>
+
+  <button (click)="goToLogin()" class="login btn btn-primary">Login</button>
+</div>

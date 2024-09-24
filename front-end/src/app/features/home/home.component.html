@@ -1,4 +1,7 @@
 <div class="container">
     <app-navbar></app-navbar>
     <app-tarefa></app-tarefa>
+    <button id="scrollToTopBtn" [class.show]="showScrollToTopBtn" (click)="scrollToTop()" class="scroll-to-top-btn">
+        <fa-icon [icon]="faAnglesUp"></fa-icon>
+    </button>
 </div>

@@ -1,4 +1,4 @@
-<div class="login-container">
+<div class="primary-container">
     <h2>LOGIN</h2>
     <form (submit)="onLogin()" class="form-login">
       <div class="input-form">
@@ -13,10 +13,10 @@
   
       <div *ngIf="mensagemErro" class="error-message">{{ mensagemErro }}</div>
   
-      <button type="submit">Entrar</button>
+      <button type="submit" class="btn btn-primary">Entrar</button>
     </form>
     
     <p>Ou</p>
 
-    <button (click)="goToRegister()" class="criar-conta">Criar Conta</button>
+    <button (click)="goToRegister()" class="criar-conta btn btn-primary">Criar Conta</button>
   </div>

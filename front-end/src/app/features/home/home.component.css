@@ -1,6 +1,36 @@
 .container {
     display: flex;
     flex-direction: column; 
+    width: 100vw;
     height: 100vh;
     overflow-y: auto; 
+    overflow-x: hidden;
 }
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--containers-color); 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24pt;
+    cursor: pointer;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: .2s;
+  }
+  
+  .scroll-to-top-btn:hover {
+    transform: scale(1.05);
+  }
+
+  .scroll-to-top-btn.show {
+    display: flex;
+    opacity: 1;
+  }

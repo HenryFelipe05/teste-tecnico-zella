@@ -1,5 +1,5 @@
 <div class="main-container">
-    <h2>Tarefas</h2>
+    <h2 class="title">TAREFAS</h2>
     <div *ngIf="tarefas.length > 0; else noTarefas" class="container">
         <div *ngFor="let tarefa of tarefas" class="tarefa-container">
             <h3>{{ tarefa.nomeTarefa }}</h3>
@@ -8,21 +8,21 @@
                 {{ tarefa.codigoStatusTarefa === 1 ? 'Pendente' : tarefa.codigoStatusTarefa === 2 ? 'Concluído' : 'Outro Status' }}
             </span>
             <div class="action-buttons">
-                <button (click)="concluirTarefa(tarefa.codigoTarefa ?? 0)">
+                <button class="button-concluir" (click)="concluirTarefa(tarefa.codigoTarefa ?? 0)">
                     <fa-icon [icon]="faCheck"></fa-icon>
                 </button>
-                <button (click)="editarTarefa(tarefa.codigoTarefa ?? 0)">
+                <button class="button-editar" (click)="editarTarefa(tarefa.codigoTarefa ?? 0)">
                     <fa-icon [icon]="faEdit"></fa-icon>
                 </button>
-                <button (click)="excluirTarefa(tarefa.codigoTarefa ?? 0)">
+                <button class="button-excluir" (click)="excluirTarefa(tarefa.codigoTarefa ?? 0)">
                     <fa-icon [icon]="faTrash"></fa-icon>
                 </button>
             </div>
         </div>
     </div>
 
-    <ng-template #noTarefas>
-        <p>Nenhuma tarefa encontrada.</p>
+    <ng-template #noTarefas class="text">
+        <h4>Nenhuma tarefa encontrada.</h4>
     </ng-template>
 
     <button (click)="adicionarTarefa()" class="botao-add">

@@ -28,7 +28,7 @@ export class LoginComponent {
         this.router.navigate(['/home']); 
       },
       error: (err) => {
-        this.mensagemErro = 'Falha no login. Verifique suas credenciais.';
+        this.mensagemErro = `Falha no login. Verifique suas credenciais.`;
       }
     });
   }

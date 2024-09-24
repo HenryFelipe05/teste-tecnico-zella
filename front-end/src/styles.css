@@ -1,28 +1,142 @@
-* {
-    font-family: Inter;
+:root {
+  --primary-color: #0b11a2;
+  --secondary-color: #2c28b9;
+  --containers-color: #2953e6;
+  --disable: #6f55e8;
+  --active-button: #906bff;
+  --text-color: #020202;
+  --background-color: #f1f1f1;
 }
 
-body, html {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column;  
+* {
+  font-family: Inter;
 }
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+
+label,
+p {
+  color: var(--background-color);
+}
+
 input {
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    margin: 5px 0;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
 }
 
 textarea {
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    margin: 5px 0;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px 0;
 }
 
+select {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 14pt;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #3137d6;
+  color: var(--background-color);
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1c20a3;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+  background-color: #7272724f;
+  color: #f1f1f1d0;
+}
+
+.primary-container {
+  width: 100%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: var(--background-color);
+  background-color: var(--containers-color);
+  box-shadow: 8px 8px 0px 0px var(--secondary-color);
+}
+
+.primary-container h2 {
+  color: var(--background-color);
+  font-weight: 800;
+  font-size: 30pt;
+}
+
+.primary-container p {
+  font-weight: 700;
+  font-size: 16pt;
+}
+
+.title {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 30pt;
+}
+
+.input-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.form-gap {
+  display: flex;
+  gap: 20px;
+}
+
+.error-message {
+  color: rgb(255, 0, 0);
+  font-size: 14pt;
+  font-weight: 600;
+  margin: 5px 0;
+}

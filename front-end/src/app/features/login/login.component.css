@@ -40,27 +40,8 @@
   align-items: start;
 }
 
-button {
-  width: 250px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 16pt;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
 .criar-conta {
   margin-top: 10px;
 }
 
-.error-message {
-  color: red;
-  margin-top: 10px;
-}
+

@@ -1,30 +1,29 @@
 <div class="container">
-    <h2>{{ isEdit ? 'Alterar Tarefa' : 'Cadastrar Tarefa' }}</h2>
-
     <form [formGroup]="tarefaForm" (ngSubmit)="onSubmit()">
-        <div class="form-container">
-            <div class="tarefa-form-group">
+        <div class="primary-container form-gap">
+            <h2 class="title">{{ isEdit ? 'Alterar Tarefa' : 'Cadastrar Tarefa' }}</h2>
+            <div class="input-form">
                 <label for="nomeTarefa">Nome da Tarefa</label>
                 <input id="nomeTarefa" formControlName="nomeTarefa" type="text" placeholder="Digite o nome da tarefa">
             </div>
 
-            <div class="tarefa-form-group">
+            <div class="input-form">
                 <label for="descricaoTarefa">Descrição da Tarefa</label>
                 <textarea id="descricaoTarefa" formControlName="descricaoTarefa" rows="3"
                     placeholder="Digite a descrição da tarefa"></textarea>
             </div>
 
-            <div class="tarefa-form-group chk-concluido">
+            <div class="input-form chk-concluido">
                 <label for="statusTarefa">Concluída</label>
                 <input id="statusTarefa" type="checkbox" formControlName="codigoStatusTarefa">
             </div>
 
             <div class="button-controls">
-                <button type="submit" [disabled]="!tarefaForm.valid">
+                <button type="submit" [disabled]="!tarefaForm.valid" class="btn btn-primary">
                     {{ isEdit ? 'Salvar Alterações' : 'Cadastrar Tarefa' }}
                 </button>
 
-                <button (click)="backToHome()">
+                <button (click)="backToHome()" class="btn btn-primary">
                     Voltar
                 </button>
             </div>

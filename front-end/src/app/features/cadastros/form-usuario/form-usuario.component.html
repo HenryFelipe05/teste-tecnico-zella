@@ -1,20 +1,21 @@
 <div class="container">
-    <h2>Atualizar Usuário</h2>
-
     <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
-        <div class="form-container">
-            <div class="tarefa-form-group">
+        <div class="primary-container form-gap">
+            <h2 class="title">Dados do Usuário</h2>
+            <div class="input-form">
                 <label for="email">Email</label>
                 <input id="email" formControlName="email" type="text" placeholder="Digite o email">
             </div>
 
-            <div class="tarefa-form-group">
+            <div class="input-form">
                 <label for="senha">Senha</label>
-                <input id="senha" formControlName="senha" type="password" placeholder="Digite a senha">
-                <input id="senhaConf" formControlName="senhaConf" type="password" placeholder="Digite a senha novamente">
+                <div class="password-confirm">
+                    <input id="senha" formControlName="senha" type="password" placeholder="Digite a senha">
+                    <input formControlName="senhaConf" type="password" placeholder="Digite a senha novamente">
+                </div>
             </div>
 
-            <div class="tarefa-form-group">
+            <div class="input-form">
                 <label for="selectGenero">Gênero</label>
                 <select formControlName="codigoGenero" id="selectGenero">
                     <option value="1">Masculino</option>
@@ -23,13 +24,14 @@
                 </select>
             </div>
 
-            <div *ngIf="usuarioForm.hasError('senhasNaoIguais') && usuarioForm.get('senhaConf')?.touched" class="error-message">
+            <div *ngIf="usuarioForm.hasError('senhasNaoIguais') && usuarioForm.get('senhaConf')?.touched"
+                class="error-message">
                 As senhas não são iguais!
             </div>
-            
+
             <div class="button-controls">
-                <button type="submit" [disabled]="!usuarioForm.valid">Salvar Alterações</button>
-                <button type="button" (click)="backToHome()">Voltar</button>
+                <button type="submit" [disabled]="!usuarioForm.valid" class="btn btn-primary">Salvar Alterações</button>
+                <button type="button" (click)="backToHome()" class="btn btn-primary">Voltar</button>
             </div>
         </div>
     </form>

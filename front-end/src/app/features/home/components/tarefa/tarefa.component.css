@@ -1,78 +1,94 @@
 .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .main-container {
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .tarefa-container {
-    width: 100%; 
-    max-width: 500px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    background-color: #013DDE;
-    border-radius: 10px;
-    margin: 10px 0;
-    padding: 20px; 
-    color: #FFF;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--containers-color);
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 20px;
+  color: var(--background-color);
+  box-shadow: 8px 8px 0px 0px var(--secondary-color);
+  transition: 0.2s;
+}
+
+.tarefa-container:hover {
+  transform: scale(1.015);
+  box-shadow: 8px 8px 0px 0px var(--secondary-color);
+}
+
+.tarefa-container h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18pt;
+}
+
+.text {
+  color: var(--text-color);
 }
 
 .tarefa-container h3 {
-    text-align: center;
-    font-weight: 600;
-    font-size: 18pt;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18pt;
 }
 
 .tarefa-container p {
-    font-weight: 300;
-    font-size: 18pt;
+  font-weight: 300;
+  font-size: 16pt;
 }
 
 .concluida {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .action-buttons {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .action-buttons button {
-    margin-right: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-    border: none;
-    color: #FFF;
-    background-color: transparent;
-    transition: .2s;
-    font-size: 15pt;
-    margin-top: 20px;
+  margin: 10px 10px;
+  padding: 5px 10px;
+  border: none;
+  font-size: 15pt;
+  background-color: transparent;
+  color: var(--background-color);
+  transition: 0.2s;
 }
 
 .action-buttons button:hover {
-    transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .botao-add {
-    background-color: transparent;
-    font-size: 50pt;
-    border: none;
-    color: #013DDE;
-    transition: .2s;
-    margin: 20px 0;
+  background-color: transparent;
+  font-size: 50pt;
+  border: none;
+  color: var(--containers-color);
+  transition: 0.2s;
+  margin: 20px 0;
 }
 
 .botao-add:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+  transform: scale(1.05);
+  cursor: pointer;
 }
