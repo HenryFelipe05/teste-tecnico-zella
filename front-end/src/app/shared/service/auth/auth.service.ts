@@ -14,4 +14,9 @@ export class AuthService {
     const dadosLogin = { email, senha };
     return this.http.post(`${this.urlApi}/login`, dadosLogin);
   }
+
+  register(email: string, senha: string, codigoGenero: number): Observable<any> {
+    const dadosCadastro = { email, senha, codigoGenero };
+    return this.http.post(`${this.urlApi}/registrar`, dadosCadastro);
+  }
 }

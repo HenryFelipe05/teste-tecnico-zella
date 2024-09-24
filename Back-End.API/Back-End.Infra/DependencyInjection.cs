@@ -27,7 +27,7 @@ namespace Back_End.Infra
 			services.AddCors(options =>
 			{
 				options.AddPolicy("AllowSpecificOrigin", builder =>
-					builder.WithOrigins("http://localhost:54652")
+					builder.WithOrigins("http://localhost:4200")
 						   .AllowAnyMethod()
 						   .AllowAnyHeader());
 			});

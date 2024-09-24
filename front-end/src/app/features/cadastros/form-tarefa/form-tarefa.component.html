@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>{{ isEdit ? 'Alterar Tarefa' : 'Cadastrar Tarefa' }}</h2>
+
+    <form [formGroup]="tarefaForm" (ngSubmit)="onSubmit()">
+        <div class="form-container">
+            <div class="tarefa-form-group">
+                <label for="nomeTarefa">Nome da Tarefa</label>
+                <input id="nomeTarefa" formControlName="nomeTarefa" type="text" placeholder="Digite o nome da tarefa">
+            </div>
+
+            <div class="tarefa-form-group">
+                <label for="descricaoTarefa">Descrição da Tarefa</label>
+                <textarea id="descricaoTarefa" formControlName="descricaoTarefa" rows="3"
+                    placeholder="Digite a descrição da tarefa"></textarea>
+            </div>
+
+            <div class="tarefa-form-group chk-concluido">
+                <label for="statusTarefa">Concluída</label>
+                <input id="statusTarefa" type="checkbox" formControlName="codigoStatusTarefa">
+            </div>
+
+            <div class="button-controls">
+                <button type="submit" [disabled]="!tarefaForm.valid">
+                    {{ isEdit ? 'Salvar Alterações' : 'Cadastrar Tarefa' }}
+                </button>
+
+                <button (click)="backToHome()">
+                    Voltar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

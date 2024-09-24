@@ -1,0 +1,79 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarefa-container {
+    width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #013DDE;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 30px;
+    color: #FFF;
+}
+
+.tarefa-container h3 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18pt;
+}
+
+.tarefa-container p {
+    font-weight: 300;
+    font-size: 18pt;
+}
+
+.concluida {
+    text-decoration: line-through;
+}
+
+.action-buttons {
+    margin-top: 10px;
+}
+
+.action-buttons button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    color: #FFF;
+    background-color: transparent;
+    transition: .2s;
+    font-size: 15pt;
+    margin-top: 20px;
+}
+
+.action-buttons button:hover {
+    transform: scale(1.1);
+}
+
+.botao-add {
+    background-color: transparent;
+    font-size: 50pt;
+    border: none;
+    color: #013DDE;
+    transition: .2s;
+    margin:40px 0;
+}
+
+.botao-add:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

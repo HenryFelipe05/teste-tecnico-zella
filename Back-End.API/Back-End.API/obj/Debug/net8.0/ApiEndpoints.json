@@ -1,8 +1,113 @@
 [
   {
+    "ContainingType": "Back_End.API.Controllers.AutenticacaoController",
+    "Method": "LoginUsuario",
+    "RelativePath": "api/Autenticacao/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginCommand",
+        "Type": "Back_End.Application.Commands.LoginCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Back_End.Application.Queries.TokenUsuarioQuery",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Back_End.API.Controllers.AutenticacaoController",
+    "Method": "AdicionarUsuario",
+    "RelativePath": "api/Autenticacao/registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioCommand",
+        "Type": "Back_End.Application.Commands.UsuarioCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Back_End.Application.Queries.TokenUsuarioQuery",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Back_End.API.Controllers.TarefaController",
+    "Method": "ExcluirTarefa",
+    "RelativePath": "api/Tarefa/{codigoTarefa}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoTarefa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Back_End.API.Controllers.TarefaController",
+    "Method": "AlterarStatusTarefa",
+    "RelativePath": "api/Tarefa/alterar-status/{codigoTarefa}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoTarefa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Back_End.API.Controllers.TarefaController",
+    "Method": "AlterarTarefa",
+    "RelativePath": "api/Tarefa/alterar-tarefa/{codigoTarefa}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoTarefa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tarefaCommand",
+        "Type": "Back_End.Application.Commands.TarefaCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Back_End.API.Controllers.TarefaController",
     "Method": "RecuperarDetalhesTarefa",
-    "RelativePath": "api/Tarefa",
+    "RelativePath": "api/Tarefa/detalhes-tarefa/{codigoTarefa}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,7 +115,7 @@
       {
         "Name": "codigoTarefa",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -28,7 +133,7 @@
   {
     "ContainingType": "Back_End.API.Controllers.TarefaController",
     "Method": "AdicionarNovaTarefa",
-    "RelativePath": "api/Tarefa",
+    "RelativePath": "api/Tarefa/nova-tarefa",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -43,55 +148,12 @@
   },
   {
     "ContainingType": "Back_End.API.Controllers.TarefaController",
-    "Method": "AlterarTarefa",
-    "RelativePath": "api/Tarefa",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "codigoTarefa",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "tarefaCommand",
-        "Type": "Back_End.Application.Commands.TarefaCommand",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Back_End.API.Controllers.TarefaController",
-    "Method": "ExcluirTarefa",
-    "RelativePath": "api/Tarefa",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "codigoTarefa",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Back_End.API.Controllers.TarefaController",
     "Method": "RecuperarTarefasUsuario",
-    "RelativePath": "api/Tarefa/{codigoUsuario}",
+    "RelativePath": "api/Tarefa/tarefas-usuario",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "codigoUsuario",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[Back_End.Domain.Models.Tarefa, Back-End.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -106,15 +168,31 @@
   },
   {
     "ContainingType": "Back_End.API.Controllers.UsuarioController",
-    "Method": "RecuperarTodosUsuarios",
-    "RelativePath": "api/Usuario",
+    "Method": "AtualizarUsuario",
+    "RelativePath": "api/Usuario/atualizar-usuario",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioCommand",
+        "Type": "Back_End.Application.Commands.UsuarioCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Back_End.API.Controllers.UsuarioController",
+    "Method": "RecuperarUsuario",
+    "RelativePath": "api/Usuario/usuario",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Back_End.Domain.Models.Usuario, Back-End.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Back_End.Application.Queries.UsuarioQuery",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -126,58 +204,15 @@
   },
   {
     "ContainingType": "Back_End.API.Controllers.UsuarioController",
-    "Method": "AdicionarUsuario",
-    "RelativePath": "api/Usuario",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "usuarioCommand",
-        "Type": "Back_End.Application.Commands.UsuarioCommand",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Back_End.API.Controllers.UsuarioController",
-    "Method": "AtualizarUsuario",
-    "RelativePath": "api/Usuario",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "usuarioCommand",
-        "Type": "Back_End.Application.Commands.UsuarioCommand",
-        "IsRequired": true
-      },
-      {
-        "Name": "codigoUsuario",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Back_End.API.Controllers.UsuarioController",
-    "Method": "RecuperarUsuario",
-    "RelativePath": "api/Usuario/{codigoUsuario}",
+    "Method": "RecuperarTodosUsuarios",
+    "RelativePath": "api/Usuario/usuarios",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "codigoUsuario",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Back_End.Domain.Models.Usuario",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Back_End.Application.Queries.UsuarioQuery, Back-End.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

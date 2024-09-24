@@ -30,8 +30,8 @@ namespace Back_End.API.Controllers
 				return Ok(tarefas);
 		}
 
-		[HttpGet("detalhes-tarefa")]
-		public async Task<ActionResult<Tarefa>> RecuperarDetalhesTarefa([FromQuery] int codigoTarefa)
+		[HttpGet("detalhes-tarefa/{codigoTarefa}")]
+		public async Task<ActionResult<Tarefa>> RecuperarDetalhesTarefa([FromRoute] int codigoTarefa)
 		{
 			if (codigoTarefa <= 0)
 				return BadRequest("Código da tarefa inválido.");
@@ -55,8 +55,8 @@ namespace Back_End.API.Controllers
 			return Created();
 		}
 
-		[HttpPut("alterar-tarefa")]
-		public async Task<ActionResult> AlterarTarefa([FromQuery] int codigoTarefa, [FromBody] TarefaCommand tarefaCommand)
+		[HttpPut("alterar-tarefa/{codigoTarefa}")]
+		public async Task<ActionResult> AlterarTarefa([FromRoute] int codigoTarefa, [FromBody] TarefaCommand tarefaCommand)
 		{
 			if (codigoTarefa < 0)
 				return BadRequest("Código da tarefa inválido.");
@@ -65,8 +65,19 @@ namespace Back_End.API.Controllers
 			return Ok();	
 		}
 
-		[HttpDelete("excluir-tarefa")]
-		public async Task<ActionResult> ExcluirTarefa([FromQuery] int codigoTarefa)
+		[HttpPut("alterar-status/{codigoTarefa}")]
+		public async Task<ActionResult> AlterarStatusTarefa([FromRoute] int codigoTarefa)
+		{
+            if (codigoTarefa < 0)
+                return BadRequest("Código da tarefa inválido.");
+
+			await _tarefaService.AlterarStatusTarefaAsync(codigoTarefa);
+
+			return Ok();
+        }
+
+		[HttpDelete("{codigoTarefa}")]
+		public async Task<ActionResult> ExcluirTarefa([FromRoute] int codigoTarefa)
 		{
 			if (codigoTarefa <= 0)
 				return BadRequest("Código da tarefa inválido.");

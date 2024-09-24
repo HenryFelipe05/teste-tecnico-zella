@@ -10,6 +10,7 @@ namespace Back_End.Application.Interface.Repositories
 		Task<TarefaQuery> RecuperarDetalhesTarefaAsync(int codigoTarefa);
 		Task AdicionarTarefaAsync(Tarefa novaTarefa);
 		Task AlterarTarefaAsync(Tarefa tarefa);
-		Task ExcluirTarefaAsync(Tarefa tarefa);
+		Task AlterarStatusTarefaAsync(int codigoTarefa, int codigoStatusTarefa);
+        Task ExcluirTarefaAsync(Tarefa tarefa);
 	}
 }

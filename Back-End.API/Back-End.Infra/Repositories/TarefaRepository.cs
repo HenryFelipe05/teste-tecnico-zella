@@ -22,7 +22,17 @@ namespace Back_End.Infra.Repositories
 			await _dbcontext.SaveChangesAsync();
 		}
 
-		public async Task AlterarTarefaAsync(Tarefa tarefa)
+        public async Task AlterarStatusTarefaAsync(int codigoTarefa, int codigoStatusTarefa)
+        {
+            var tarefa = await _dbcontext.Tarefas.FindAsync(codigoTarefa);
+
+            tarefa.CodigoStatusTarefa = codigoStatusTarefa;
+
+            _dbcontext.Tarefas.Update(tarefa);
+            await _dbcontext.SaveChangesAsync();
+        }
+
+        public async Task AlterarTarefaAsync(Tarefa tarefa)
 		{
 			_dbcontext.Entry(tarefa).State = EntityState.Modified;
 			await _dbcontext.SaveChangesAsync();
@@ -40,10 +50,10 @@ namespace Back_End.Infra.Repositories
 			.Select(t => new TarefaQuery
             {
                 CodigoTarefa = t.CodigoTarefa,
-				CodigoUsuario = t.CodigoUsuario,
+				CodigoUsuario = (int)t.CodigoUsuario,
 				NomeTarefa = t.NomeTarefa,
 				DescricaoTarefa = t.DescricaoTarefa,
-				CodigoStatusTarefa = t.CodigoStatusTarefa,
+				CodigoStatusTarefa = (int)t.CodigoStatusTarefa,
             }).FirstOrDefaultAsync();
 		}
 
@@ -52,10 +62,10 @@ namespace Back_End.Infra.Repositories
 			return await _dbcontext.Tarefas.Where(t => t.CodigoUsuario == codigoUsuario).Select(t => new TarefaQuery
             {
                 CodigoTarefa = t.CodigoTarefa,
-                CodigoUsuario = t.CodigoUsuario,
+                CodigoUsuario = (int)t.CodigoUsuario,
                 NomeTarefa = t.NomeTarefa,
                 DescricaoTarefa = t.DescricaoTarefa,
-                CodigoStatusTarefa = t.CodigoStatusTarefa,
+                CodigoStatusTarefa = (int)t.CodigoStatusTarefa,
             }).ToListAsync();
 		}
 	}
