@@ -5,8 +5,7 @@
             <h3>{{ tarefa.nomeTarefa }}</h3>
             <p [ngClass]="{ 'concluida': tarefa.codigoStatusTarefa === 2 }">{{ tarefa.descricaoTarefa }}</p>
             <span>Status:
-                {{ tarefa.codigoStatusTarefa === 1 ? 'Pendente' : tarefa.codigoStatusTarefa === 2 ? 'Concluído' : 'Outro
-                Status' }}
+                {{ tarefa.codigoStatusTarefa === 1 ? 'Pendente' : tarefa.codigoStatusTarefa === 2 ? 'Concluído' : 'Outro Status' }}
             </span>
             <div class="action-buttons">
                 <button (click)="concluirTarefa(tarefa.codigoTarefa ?? 0)">

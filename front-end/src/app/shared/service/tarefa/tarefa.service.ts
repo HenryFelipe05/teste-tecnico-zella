@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { TarefaQuery } from '../../../core/models/tarefa-query.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TarefaService {
+  private tarefasSubject = new BehaviorSubject<any[]>([]);
+  public tarefas$ = this.tarefasSubject.asObservable();
   private apiUrl = 'https://localhost:44368/api/Tarefa';
   private headers = new HttpHeaders({ 'Authorization': `Bearer ${localStorage.getItem('token')}` });
 
@@ -34,5 +36,13 @@ export class TarefaService {
 
   excluirTarefa(codigoTarefa: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${codigoTarefa}`, { headers: this.headers });
+  }
+
+  setTarefas(tarefas: any[]): void {
+    this.tarefasSubject.next(tarefas);
+  }
+
+  limparTarefas(): void {
+    this.tarefasSubject.next([]);
   }
 }

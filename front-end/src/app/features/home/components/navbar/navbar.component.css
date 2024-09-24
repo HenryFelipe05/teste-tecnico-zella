@@ -1,0 +1,19 @@
+.container {
+    width: 95vw;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 20pt;
+    transition: .2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
